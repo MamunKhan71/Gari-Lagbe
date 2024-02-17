@@ -37,6 +37,7 @@
                         clifford: '#da373d',
                         gariPrimary: '#1dd100',
                         gariBlack: '#030712',
+                        gariGray: '#03071299',
                     }
                 }
             }
@@ -46,7 +47,7 @@
 
 <body>
     <!-- header section start -->
-    <header class="max-w-[1172px] mx-auto pt-14">
+    <header class="max-w-[1172px] mx-auto pt-14 space-y-8">
         <nav class="font-raleway flex justify-between items-center">
             <div>
                 <h1 class="text-4xl font-extrabold text-gariBlack">GariLagbe</h1>
@@ -70,8 +71,67 @@
                 </button>
             </div>
         </nav>
+        <!-- header section end -->
+        <section class="hero-section relative">
+            <div class="hero bg-cover bg-no-repeat h-[550px] " style="background-image: url(images/banner.png);">
+                <div class="rounded-[32px]"></div>
+                <div class="hero-content text-center text-neutral-content">
+                    <div class="w-full">
+                        <h1 class="mb-5 px-52 text-6xl font-bold leading-[86px]">End-to-End Travel with <span
+                                class="text-gariPrimary">GariLagbe</span></h1>
+                        <p class="mb-8 px-60 text-lg font-inter leading-7">Yes, you can run unit tests and view the
+                            results directly within the app. The
+                            integrated testing features allow for a streamlined .</p>
+                        <button class="btn bg-gariPrimary border-none text-xl font-bold px-7">Buy Tickets</button>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute -bottom-20">
+                <div class="grid grid-cols-3 gap-6 px-24">
+                    <div class="card bg-base-100 border-b-4 border-gariPrimary rounded-3xl">
+                        <div class="card-body font-inter p-0">
+                            <div class="flex gap-4 px-8 py-9">
+                                <div class="card-actions justify-end">
+                                    <img src="./images/people.png" alt="">
+                                </div>
+                                <div>
+                                    <h2 class="text-4xl font-bold">500K+</h2>
+                                    <p class="text-gariGray text-lg">Registered users</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 border-b-4 border-gariPrimary rounded-3xl">
+                        <div class="card-body font-inter p-0">
+                            <div class="flex gap-4 px-8 py-9">
+                                <div class="card-actions justify-end">
+                                    <img src="./images/ticket-cupon.png" alt="">
+                                </div>
+                                <div>
+                                    <h2 class="text-4xl font-bold">1.7 lacks</h2>
+                                    <p class="text-gariGray text-lg">Tickets sold</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 border-b-4 border-gariPrimary rounded-3xl">
+                        <div class="card-body font-inter p-0">
+                            <div class="flex gap-4 px-8 py-9">
+                                <div class="card-actions justify-end">
+                                    <img src="./images/stoppage.png" alt="">
+                                </div>
+                                <div>
+                                    <h2 class="text-4xl font-bold">80K+</h2>
+                                    <p class="text-gariGray text-lg">Rental partners</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
     </header>
-    <!-- header section end -->
 
     <!-- main section start -->
     <main>
