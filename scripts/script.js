@@ -7,6 +7,7 @@ document.getElementById('seatContainer').addEventListener('click', function (e) 
             if(count == 4){
                 document.getElementById('couponBtnEnable').removeAttribute('disabled')
             }
+            document.getElementById('seatCounter').innerText = count;
             clickedButton.push(e.target.id);
             let seat = document.getElementById('seatCount');
             let seatFloat = parseFloat(seat.innerText);
@@ -33,9 +34,8 @@ document.getElementById('seatContainer').addEventListener('click', function (e) 
             grandPrice.innerText = ticketPrice;
             count++;
         } else {
-            alert("Sorry!")
+            alert("Maximum 4 Seats can be booked under one mobile number!")
         }
-        console.log(e.target.id)
     }
 });
 function getDiscount() {
@@ -46,6 +46,16 @@ function getDiscount() {
     if (couponType.value == 'new15') {
         let grandPrice = document.getElementById('grandTotal');
         discount = parseFloat(totalUpdatePrice) * 0.15;
+        grandTotal = parseFloat(totalUpdatePrice) - discount;
+        grandPrice.innerText = grandTotal;
+        let newElement = document.getElementById('discountPrices');
+        newElement.classList.remove('hidden');
+        document.getElementById('discountPrice').innerText = discount;
+        document.getElementById('couponBtn').classList.add('hidden');
+    }
+    if (couponType.value == 'Couple20') {
+        let grandPrice = document.getElementById('grandTotal');
+        discount = parseFloat(totalUpdatePrice) * 0.20;
         grandTotal = parseFloat(totalUpdatePrice) - discount;
         grandPrice.innerText = grandTotal;
         let newElement = document.getElementById('discountPrices');
