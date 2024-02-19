@@ -48,11 +48,11 @@
 <body>
     <!-- header section start -->
     <header class="max-w-[1172px] mx-auto pt-14 space-y-8">
-        <nav class="font-raleway flex justify-between items-center">
+        <!-- <nav class="font-raleway flex flex-col lg:flex-row justify-between items-center ">
             <div>
-                <h1 class="text-4xl font-extrabold text-gariBlack">GariLagbe</h1>
+                <h1 class="text-3xl lg:text-4xl font-extrabold text-gariBlack">GariLagbe</h1>
             </div>
-            <div>
+            <div c>
                 <ul class="flex gap-14 text-lg font-medium">
                     <li>Home</li>
                     <li>About</li>
@@ -70,29 +70,76 @@
                     </svg>
                 </button>
             </div>
+        </nav> -->
+        <nav>
+            <div class="navbar p-0 font-raleway">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="flex text-lg font-medium menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-3xl lg:text-4xl font-extrabold text-gariBlack">GariLagbe</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 flex text-lg font-medium">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="px-4 navbar-end">
+                    <button class="btn border-gariPrimary rounded-xl text-gariPrimary lg:px-7">
+                        Bus
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M4 17C4 17.5304 4.21071 18.0391 4.58579 18.4142C4.96086 18.7893 5.46957 19 6 19C6.53043 19 7.03914 18.7893 7.41421 18.4142C7.78929 18.0391 8 17.5304 8 17M4 17C4 16.4696 4.21071 15.9609 4.58579 15.5858C4.96086 15.2107 5.46957 15 6 15C6.53043 15 7.03914 15.2107 7.41421 15.5858C7.78929 15.9609 8 16.4696 8 17M4 17H2V6C2 5.73478 2.10536 5.48043 2.29289 5.29289C2.48043 5.10536 2.73478 5 3 5H17C18.3261 5 19.5979 5.7375 20.5355 7.05025C21.4732 8.36301 22 10.1435 22 12M8 17H16M16 17C16 17.5304 16.2107 18.0391 16.5858 18.4142C16.9609 18.7893 17.4696 19 18 19C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17M16 17C16 16.4696 16.2107 15.9609 16.5858 15.5858C16.9609 15.2107 17.4696 15 18 15C18.5304 15 19.0391 15.2107 19.4142 15.5858C19.7893 15.9609 20 16.4696 20 17M20 17H22V12M22 12H17.5L16 5M2 10H17M7 5V10M12 5V10"
+                                stroke="#1DD100" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </nav>
         <!-- header section end -->
         <section class="hero-section">
-            <div class="hero bg-cover bg-no-repeat h-[550px] " style="background-image: url(images/banner.png);">
-                <div class="rounded-[32px]"></div>
+            <div class="hero bg-cover bg-no-repeat h-auto lg:h-[550px] "
+                style="background-image: url(images/banner.png);">
+                <div class="lg:rounded-[32px]"></div>
                 <div class="hero-content text-center text-neutral-content">
                     <div class="w-full">
-                        <h1 class="mb-5 px-52 text-6xl font-bold leading-[86px]">End-to-End Travel with <span
-                                class="text-gariPrimary">GariLagbe</span></h1>
-                        <p class="mb-8 px-60 text-lg font-inter leading-7">Yes, you can run unit tests and view the
+                        <h1
+                            class="mb-3 lg:mb-5 px-0 lg:px-52 text-4xl lg:text-6xl font-bold leading-12 lg:leading-[86px]">
+                            End-to-End Travel
+                            with <span class="text-gariPrimary">GariLagbe</span></h1>
+                        <p class="mb-5 lg:mb-8 px-8 lg:px-60 text-base lg:text-lg font-inter leading-6 lg:leading-7">
+                            Yes, you can run unit tests and view
+                            the
                             results directly within the app. The
                             integrated testing features allow for a streamlined .</p>
-                        <button class="btn bg-gariPrimary border-none text-xl font-bold px-7" onclick="document.getElementById('buyTicket').scrollIntoView({
+                        <button class="btn bg-gariPrimary border-none text-xl font-bold px-4 lg:px-7" onclick="document.getElementById('buyTicket').scrollIntoView({
                             behavior: 'smooth'
                         })">Buy Tickets</button>
                     </div>
                 </div>
             </div>
-            <div class="relative bottom-16">
-                <div class="grid grid-cols-3 gap-6 px-24">
+            <div class="lg:relative lg:bottom-16 mt-5 lg:mt-0">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 px-4 lg:px-24">
                     <div class="card bg-base-100 border-b-4 border-gariPrimary rounded-3xl">
                         <div class="card-body font-inter p-0">
-                            <div class="flex gap-4 px-8 py-9">
+                            <div
+                                class="flex flex-col lg:flex-row items-center text-center lg:text-left gap-4 px-4 lg:px-8 py-4 lg:py-9">
                                 <div class="card-actions justify-end">
                                     <img src="./images/people.png" alt="">
                                 </div>
@@ -105,7 +152,8 @@
                     </div>
                     <div class="card bg-base-100 border-b-4 border-gariPrimary rounded-3xl">
                         <div class="card-body font-inter p-0">
-                            <div class="flex gap-4 px-8 py-9">
+                            <div
+                                class="flex flex-col lg:flex-row items-center text-center lg:text-left gap-4 px-4 lg:px-8 py-4 lg:py-9">
                                 <div class="card-actions justify-end">
                                     <img src="./images/ticket-cupon.png" alt="">
                                 </div>
@@ -118,7 +166,8 @@
                     </div>
                     <div class="card bg-base-100 border-b-4 border-gariPrimary rounded-3xl">
                         <div class="card-body font-inter p-0">
-                            <div class="flex gap-4 px-8 py-9">
+                            <div
+                                class="flex flex-col lg:flex-row items-center text-center lg:text-left gap-4 px-4 lg:px-8 py-4 lg:py-9">
                                 <div class="card-actions justify-end">
                                     <img src="./images/stoppage.png" alt="">
                                 </div>
@@ -129,7 +178,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -137,34 +185,34 @@
 
     <!-- main section start -->
     <main>
-        <div class="max-w-[1172px] mx-auto mt-28 space-y-12">
+        <div class="max-w-[1172px] mx-auto mt-12 lg:mt-28 space-y-6 lg:space-y-12">
             <div>
-                <h1 class="text-center font-raleway font-bold text-4xl">Best offers for you</h1>
+                <h1 class="text-center font-raleway font-bold text-2xl lg:text-4xl">Best offers for you</h1>
             </div>
             <div>
-                <div class="grid grid-cols-2 gap-9">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-9 px-4 lg:px-0">
                     <div class="bg-[#FFBF0F] rounded-3xl flex justify-center items-center">
-                        <div>
-                            <h1 class="text-4xl font-black">15% OFF</h1>
-                            <p class="text-xl font-semibold leading-9">on your next purchase</p>
-                            <small class="text-lg text-[#03071266]">use by January 2024</small>
+                        <div class="px-4 lg:px-0 text-center lg:text-left">
+                            <h1 class="text-3xl lg:text-4xl font-black">15% OFF</h1>
+                            <p class="text-lg lg:text-xl font-semibold leading-6 lg:leading-9">on your next purchase</p>
+                            <small class="text-base lg:text-lg text-[#03071266]">use by January 2024</small>
                         </div>
                         <img src="./images/cupon-devider.png" alt="coupon divider">
                         <div class="font-raleway text-center">
-                            <h1 class="text-3xl font-bold leading-10">NEW15</h1>
-                            <p class="text-xl font-medium text-[#03071266]">Coupon Code</p>
+                            <h1 class="text-2xl lg:text-3xl font-bold leading-10">NEW15</h1>
+                            <p class="text-base lg:text-xl font-medium text-[#03071266]">Coupon Code</p>
                         </div>
                     </div>
                     <div class="bg-[#F78C9C] rounded-3xl flex justify-center items-center">
-                        <div>
-                            <h1 class="text-4xl font-black">20% OFF</h1>
-                            <p class="text-xl font-semibold leading-9">on your next purchase</p>
-                            <small class="text-lg text-[#03071266]">use by January 2024</small>
+                        <div class="px-4 lg:px-0 text-center lg:text-left">
+                            <h1 class="text-3xl lg:text-4xl font-black">20% OFF</h1>
+                            <p class="text-lg lg:text-xl font-semibold leading-6 lg:leading-9">on your next purchase</p>
+                            <small class="text-base lg:text-lg text-[#03071266]">use by January 2024</small>
                         </div>
                         <img src="./images/cupon-devider.png" alt="coupon divider">
                         <div class="font-raleway text-center">
-                            <h1 class="text-3xl font-bold leading-10">Couple 20</h1>
-                            <p class="text-xl font-medium text-[#03071266]">Coupon Code</p>
+                            <h1 class="text-2xl lg:text-3xl font-bold leading-10">Couple20</h1>
+                            <p class="text-base lg:text-xl font-medium text-[#03071266]">Coupon Code</p>
                         </div>
                     </div>
                 </div>
@@ -175,25 +223,28 @@
             </div>
         </div>
         <div>
-            <div id="buyTicket" class="card bg-[#F7F8F8] border-t-4 border-gariPrimary rounded-t-[88px] mt-28">
-                <div class="card-body font-inter p-28 space-y-6 ">
+            <div id="buyTicket"
+                class="card bg-[#F7F8F8] border-t-2 lg:border-t-4 border-gariPrimary rounded-t-[44px] lg:rounded-t-[88px] mt-12 lg:mt-28">
+                <div class="card-body font-inter p-5 lg:p-28 space-y-6">
                     <div class="space-y-6">
-                        <h1 class="text-4xl font-bold text-center font-raleway">GariLagbe</h1>
-                        <p class="font-inter text-lg text-gariGray text-center px-60">Yes, you can run unit tests and
+                        <h1 class="text-3xl lg:text-4xl font-bold text-center font-raleway">GariLagbe</h1>
+                        <p class="font-inter text-base lg:text-lg text-gariGray text-center px-4 lg:px-60">Yes, you can
+                            run unit tests and
                             view the results directly within the app. The integrated
                             testing features allow for a streamlined .</p>
                     </div>
-                    <div class="bg-white rounded-3xl w-[1172px] mx-auto">
-                        <div class="flex items-center px-8 justify-between gap-5">
+                    <div class="bg-white rounded-3xl w-full lg:w-[1172px] mx-auto">
+                        <div class="flex flex-col lg:flex-row items-center px-4 lg:px-8 justify-between gap-5">
                             <!-- first part -->
-                            <div class="space-y-8 py-8 w-2/3">
-                                <div class="flex justify-between items-center">
-                                    <div class="flex gap-3 items-center justify-center">
+                            <div class="space-y-6 lg:space-y-8 pt-8 lg:py-8 w-full lg:w-2/3">
+                                <div class="flex flex-col lg:flex-row gap-4 lg:gap-0 justify-between items-center">
+                                    <div class="flex flex-col lg:flex-row gap-3 items-center justify-center">
                                         <div>
                                             <img src="./images/bus-logo.png" alt="">
                                         </div>
                                         <div>
-                                            <h1 class="text-3xl font-raleway font-bold">Greenline Paribahan</h1>
+                                            <h1 class="text-2xl lg:text-3xl font-raleway font-bold">Greenline Paribahan
+                                            </h1>
                                             <p class="text-gariGray font-inter">Coach-009-WEB ! AC_Business</p>
                                         </div>
                                     </div>
@@ -210,8 +261,8 @@
                                         </button>
                                     </div>
                                 </div>
-                                <div class="bg-[#F7F8F8] rounded-3xl p-8 space-y-6">
-                                    <div class="flex justify-between items-center text-lg font-raleway">
+                                <div class="bg-[#F7F8F8] rounded-3xl p-4 lg:p-8 space-y-6">
+                                    <div class="flex  justify-between items-center text-lg font-raleway">
                                         <span class="text-gariGray font-semibold">Route</span>
                                         <span class="font-semibold">Dhaka-Sylhet</span>
                                     </div>
@@ -222,7 +273,7 @@
                                     </div>
                                     <hr class="border-dashed">
                                     <div>
-                                        <div class="flex justify-between font-inter gap-6">
+                                        <div class="flex flex-col lg:flex-row justify-between font-inter gap-6">
                                             <button class="btn text-base font-interse">Boarding Point -
                                                 Laxmipur</button>
                                             <button class="btn text-base font-interse">Dropping Point -
@@ -233,8 +284,8 @@
                                 </div>
                             </div>
                             <!-- second part -->
-                            <img class="h-full" src="./images/info-devider.png">
-                            <div class="flex justify-center flex-1 ">
+                            <img class="h-full hidden lg:block" src="./images/info-devider.png">
+                            <div class="flex flex-col lg:flex-row justify-center lg:flex-1 pb-8 lg:pb-0">
                                 <div class="flex flex-col items-center font-raleway">
                                     <img class="mb-6" src="./images/fare.png" alt="taka icon">
                                     <h1 class="text-gariBlack font-bold text-3xl ">550 Taka</h1>
@@ -244,10 +295,11 @@
                         </div>
                     </div>
                     <!-- seat selection section -->
-                    <div class="bg-white w-[1172px] mx-auto rounded-3xl p-8 flex gap-8">
-                        <section class="space-y-4 w-1/2">
-                            <div>
-                                <h1 class="text-2xl font-semibold font-raleway">Select Your Seat</h1>
+                    <div
+                        class="bg-white w-full lg:w-[1172px] lg:mx-auto rounded-3xl p-4 lg:p-8 flex flex-col lg:flex-row gap-4 lg:gap-8">
+                        <section class="space-y-4 w-full lg:w-1/2">
+                            <div class="space-y-4">
+                                <h1 class="text-xl lg:text-2xl font-semibold font-raleway text-center lg:text-left">Select Your Seat</h1>
                                 <hr class="border-dashed">
                                 <div class="flex justify-between">
                                     <div>
@@ -279,7 +331,7 @@
                                                     stroke="#1DD100" stroke-width="2" stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                             </svg>
-                                            <span class="font-inter font-medium text-gariPrimary">Selected</span>
+                                            <span class="font-inter font-medium text-gariPrimary ">Selected</span>
                                         </div>
                                     </div>
                                 </div>
@@ -287,16 +339,17 @@
                             </div>
                             <div id="seatContainer">
                                 <div class="space-y-6 mt-6 ">
-                                    <div class="flex items-center gap-10">
-                                        <span class="w-4"></span>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button class="w-28"></button>
-                                            <button class="w-28"></button>
+                                    <div class="flex items-center gap-4 lg:gap-10 w-full">
+                                        <span class="w-2 lg:w-4"></span>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="A1" class="w-full lg:w-28" disabled></button>
+                                            <button id="A2" class="w-full lg:w-28" disabled></button>
                                         </div>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button class="w-28"></button>
-                                            <button class="btn w-28"><svg xmlns="http://www.w3.org/2000/svg" width="32"
-                                                    height="32" viewBox="0 0 32 32" fill="none">
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="A3" class="w-full lg:w-28" disabled></button>
+                                            <button id="A4" class="btn w-full lg:w-28" disabled><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                                    viewBox="0 0 32 32" fill="none">
                                                     <path
                                                         d="M16 28C14.4241 28 12.8637 27.6896 11.4078 27.0866C9.95189 26.4835 8.62902 25.5996 7.51472 24.4853C6.40042 23.371 5.5165 22.0481 4.91345 20.5922C4.31039 19.1363 4 17.5759 4 16C4 14.4241 4.31039 12.8637 4.91345 11.4078C5.5165 9.95189 6.40042 8.62902 7.51472 7.51472C8.62902 6.40042 9.95189 5.5165 11.4078 4.91345C12.8637 4.31039 14.4241 4 16 4C17.5759 4 19.1363 4.31039 20.5922 4.91345C22.0481 5.5165 23.371 6.40042 24.4853 7.51472C25.5996 8.62902 26.4835 9.95189 27.0866 11.4078C27.6896 12.8637 28 14.4241 28 16C28 17.5759 27.6896 19.1363 27.0866 20.5922C26.4835 22.0481 25.5996 23.371 24.4853 24.4853C23.371 25.5996 22.0481 26.4835 20.5922 27.0866C19.1363 27.6896 17.5759 28 16 28ZM16 28V18.6667M13.3333 16C13.3333 16.7072 13.6143 17.3855 14.1144 17.8856C14.6145 18.3857 15.2928 18.6667 16 18.6667M13.3333 16C13.3333 15.2928 13.6143 14.6145 14.1144 14.1144C14.6145 13.6143 15.2928 13.3333 16 13.3333C16.7072 13.3333 17.3855 13.6143 17.8856 14.1144C18.3857 14.6145 18.6667 15.2928 18.6667 16M13.3333 16L4.33333 13.3333M16 18.6667C16.7072 18.6667 17.3855 18.3857 17.8856 17.8856C18.3857 17.3855 18.6667 16.7072 18.6667 16M18.6667 16L27.6667 13.3333"
                                                         stroke="#030712" stroke-opacity="0.7" stroke-width="2"
@@ -304,114 +357,114 @@
                                                 </svg></button>
                                         </div>
                                     </div>
-                                    <div class="flex items-center gap-10">
-                                        <span class="w-4">A</span>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button id="A1" class="btn w-28">A1</button>
-                                            <button id="A2" class="btn w-28">A2</button>
+                                    <div class="flex items-center gap-4 lg:gap-10 w-full">
+                                        <span class="w-2 lg:w-4">A</span>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="A1" class="btn w-full lg:w-28">A1</button>
+                                            <button id="A2" class="btn w-full lg:w-28">A2</button>
                                         </div>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button id="A3" class="btn w-28">A3</button>
-                                            <button id="A4" class="btn w-28">A4</button>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center gap-10">
-                                        <span class="w-4">B</span>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button id="B1" class="btn w-28">B1</button>
-                                            <button id="B2" class="btn w-28">B2</button>
-                                        </div>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button id="B3" class="btn w-28">B3</button>
-                                            <button id="B4" class="btn w-28">B4</button>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="A3" class="btn w-full lg:w-28">A3</button>
+                                            <button id="A4" class="btn w-full lg:w-28">A4</button>
                                         </div>
                                     </div>
-                                    <div class="flex items-center gap-10">
-                                        <span class="w-4">C</span>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button id="C1" class="btn w-28">C1</button>
-                                            <button id="C2" class="btn w-28">C2</button>
+                                    <div class="flex items-center gap-4 lg:gap-10">
+                                        <span class="w-2 lg:w-4">B</span>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="B1" class="btn w-full lg:w-28">B1</button>
+                                            <button id="B2" class="btn w-full lg:w-28">B2</button>
                                         </div>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button id="C3" class="btn w-28">C3</button>
-                                            <button id="C4" class="btn w-28">C4</button>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center gap-10">
-                                        <span class="w-4">D</span>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button id="D1" class="btn w-28">D1</button>
-                                            <button id="D2" class="btn w-28">D2</button>
-                                        </div>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button id="D3" class="btn w-28">D3</button>
-                                            <button id="D4" class="btn w-28">D4</button>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="B3" class="btn w-full lg:w-28">B3</button>
+                                            <button id="B4" class="btn w-full lg:w-28">B4</button>
                                         </div>
                                     </div>
-                                    <div class="flex items-center gap-10">
-                                        <span class="w-4">E</span>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button id="E1" class="btn w-28">E1</button>
-                                            <button id="E2" class="btn w-28">E2</button>
+                                    <div class="flex items-center gap-4 lg:gap-10">
+                                        <span class="w-2 lg:w-4">C</span>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="C1" class="btn w-full lg:w-28">C1</button>
+                                            <button id="C2" class="btn w-full lg:w-28">C2</button>
                                         </div>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button id="E3" class="btn w-28">E3</button>
-                                            <button id="E4" class="btn w-28">E4</button>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center gap-10">
-                                        <span class="w-4">F</span>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button id="F1" class="btn w-28">F1</button>
-                                            <button id="F2" class="btn w-28">F2</button>
-                                        </div>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button id="F3" class="btn w-28">F3</button>
-                                            <button id="F4" class="btn w-28">F4</button>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="C3" class="btn w-full lg:w-28">C3</button>
+                                            <button id="C4" class="btn w-full lg:w-28">C4</button>
                                         </div>
                                     </div>
-                                    <div class="flex items-center gap-10">
-                                        <span class="w-4">G</span>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button id="G1" class="btn w-28">G1</button>
-                                            <button id="G2" class="btn w-28">G2</button>
+                                    <div class="flex items-center gap-4 lg:gap-10">
+                                        <span class="w-2 lg:w-4">D</span>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="D1" class="btn w-full lg:w-28">D1</button>
+                                            <button id="D2" class="btn w-full lg:w-28">D2</button>
                                         </div>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button id="G3" class="btn w-28">G3</button>
-                                            <button id="G4" class="btn w-28">G4</button>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center gap-10">
-                                        <span class="w-4">H</span>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button id="H1" class="btn w-28">H1</button>
-                                            <button id="H2" class="btn w-28">H2</button>
-                                        </div>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button id="H3" class="btn w-28">H3</button>
-                                            <button id="H4" class="btn w-28">H4</button>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="D3" class="btn w-full lg:w-28">D3</button>
+                                            <button id="D4" class="btn w-full lg:w-28">D4</button>
                                         </div>
                                     </div>
-                                    <div class="flex items-center gap-10">
-                                        <span class="w-4">I</span>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button id="I1" class="btn w-28">I1</button>
-                                            <button id="I2" class="btn w-28">I2</button>
+                                    <div class="flex items-center gap-4 lg:gap-10">
+                                        <span class="w-2 lg:w-4">E</span>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="E1" class="btn w-full lg:w-28">E1</button>
+                                            <button id="E2" class="btn w-full lg:w-28">E2</button>
                                         </div>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button id="I3" class="btn w-28">I3</button>
-                                            <button id="I4" class="btn w-28">I4</button>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="E3" class="btn w-full lg:w-28">E3</button>
+                                            <button id="E4" class="btn w-full lg:w-28">E4</button>
                                         </div>
                                     </div>
-                                    <div class="flex items-center gap-10">
-                                        <span class="w-4">J</span>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button id="J1" class="btn w-28">J1</button>
-                                            <button id="J2" class="btn w-28">J2</button>
+                                    <div class="flex items-center gap-4 lg:gap-10">
+                                        <span class="w-2 lg:w-4">F</span>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="F1" class="btn w-full lg:w-28">F1</button>
+                                            <button id="F2" class="btn w-full lg:w-28">F2</button>
                                         </div>
-                                        <div class="grid grid-cols-2 gap-8">
-                                            <button id="J3" class="btn w-28">J3</button>
-                                            <button id="J4" class="btn w-28">J4</button>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="F3" class="btn w-full lg:w-28">F3</button>
+                                            <button id="F4" class="btn w-full lg:w-28">F4</button>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-4 lg:gap-10">
+                                        <span class="w-2 lg:w-4">G</span>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="G1" class="btn w-full lg:w-28">G1</button>
+                                            <button id="G2" class="btn w-full lg:w-28">G2</button>
+                                        </div>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="G3" class="btn w-full lg:w-28">G3</button>
+                                            <button id="G4" class="btn w-full lg:w-28">G4</button>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-4 lg:gap-10">
+                                        <span class="w-2 lg:w-4">H</span>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="H1" class="btn w-full lg:w-28">H1</button>
+                                            <button id="H2" class="btn w-full lg:w-28">H2</button>
+                                        </div>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="H3" class="btn w-full lg:w-28">H3</button>
+                                            <button id="H4" class="btn w-full lg:w-28">H4</button>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-4 lg:gap-10">
+                                        <span class="w-2 lg:w-4 flex items-center">I <span>&nbsp;&nbsp;</span> </span>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="I1" class="btn w-full lg:w-28">I1</button>
+                                            <button id="I2" class="btn w-full lg:w-28">I2</button>
+                                        </div>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="I3" class="btn w-full lg:w-28">I3</button>
+                                            <button id="I4" class="btn w-full lg:w-28">I4</button>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-4 lg:gap-10">
+                                        <span class="w-2 lg:w-4">J</span>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="J1" class="btn w-full lg:w-28">J1 </button>
+                                            <button id="J2" class="btn w-full lg:w-28">J2 </button>
+                                        </div>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
+                                            <button id="J3" class="btn w-full lg:w-28">J3</button>
+                                            <button id="J4" class="btn w-full lg:w-28">J4</button>
                                         </div>
                                     </div>
                                 </div>
@@ -420,16 +473,18 @@
                         <!-- second section -->
                         <div class="h-auto border-l-[#0307124d] border-l-2 border-dashed">
                         </div>
-                        <section class="space-y-4 w-1/2">
-                            <h1 class="text-2xl font-semibold font-raleway">Select Your Seat</h1>
+                        <section class="space-y-4 w-full lg:w-1/2">
+                            <h1 class="text-2xl font-semibold font-raleway text-center lg:text-left">Select Your Seat</h1>
                             <hr class="border-dashed w-full">
-                            <div class="bg-[#F7F8F8] rounded-xl p-5">
+                            <div class="bg-[#F7F8F8] rounded-xl p-2 lg:p-5">
                                 <div class="overflow-x-auto space-y-4">
                                     <table class="table">
                                         <!-- head -->
                                         <thead>
                                             <tr>
-                                                <th>Seat<span id="seatCounter" class="ml-1 bg-gariPrimary rounded-2xl text-xs px-2 text-white">0</span></th>
+                                                <th>Seat<span id="seatCounter"
+                                                        class="ml-1 bg-gariPrimary rounded-2xl text-xs px-2 text-white">0</span>
+                                                </th>
                                                 <th class="text-left">Class</th>
                                                 <th class="text-right">Price</th>
                                             </tr>
@@ -450,10 +505,11 @@
                                     <div id="couponBtn" class="relative px-4">
                                         <input type="text" name="name" id="couponName" class="w-full rounded-xl p-5"
                                             placeholder="Have any coupon">
-                                        <button id="couponBtnEnable" class="absolute btn bg-gariPrimary text-white px-4 top-2 right-6"
+                                        <button id="couponBtnEnable"
+                                            class="absolute btn bg-gariPrimary text-white px-4 top-2 right-6"
                                             onclick="getDiscount()" disabled>Apply</button>
                                     </div>
-                                    <div class="flex justify-between w-full px-4">
+                                    <div class="flex justify-between w-full px-4 pb-4">
                                         <span class="font-bold">Grand Total</span>
                                         <span class="font-bold">BDT <span id="grandTotal"></span></span>
                                     </div>
@@ -511,14 +567,14 @@
     <!-- main section end -->
 
     <!-- footer section start -->
-    <footer class=" bg-gariBlack py-28">
-        <div class="w-[1172px] mx-auto space-y-12">
-            <section class="footer text-neutral-content flex justify-between items-center">
-                <aside>
+    <footer class=" bg-gariBlack py-12 lg:py-28">
+        <div class="w-full lg:w-[1172px] mx-auto space-y-12">
+            <section class="footer text-neutral-content flex flex-col lg:flex-row text-center lg:text-left justify-between items-center">
+                <aside class="flex lg:block flex-col items-center justify-center">
                     <h1 class="text-4xl text-white font-extrabold font-raleway">GariLagbe</h1>
                     <p>GariLagbe is a digital platform to make your daily commuting better.</p>
                 </aside>
-                <nav>
+                <nav class="flex lg:block flex-col items-center justify-center">
                     <h6 class="footer-title">Download Our App</h6>
                     <div class="grid grid-flow-col gap-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="189" height="56" viewBox="0 0 189 56"
@@ -552,9 +608,9 @@
                 </nav>
             </section>
             <hr class="border-dashed">
-            <div class="text-white flex justify-between">
-                <p class="text-[#ffffffb3]">@all rights reserved, P-Ticket services limited.2024</p>
-                <div class="flex gap-8">
+            <div class="text-white flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-0">
+                <p class="text-[#ffffffb3]">@all rights reserved, GariLagbe services limited.2024</p>
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8">
                     <span>Terms & condition</span>
                     <span>Return & refund policy</span>
                     <span>Privacy policy</span>
