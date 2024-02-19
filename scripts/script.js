@@ -18,10 +18,14 @@ document.getElementById('seatContainer').addEventListener('click', function (e) 
             let newRow = document.createElement('tr');
             let seatName = document.createElement('td');
             seatName.innerText = e.target.id;
+            seatName.classList.add('text-[#03071299]');
+            
             let seatClass = document.createElement('td');
+            seatClass.classList.add('text-[#03071299]');
             seatClass.innerText = 'Economic'
             let seatPrice = document.createElement('td');
             seatPrice.classList.add('text-right');
+            seatPrice.classList.add('text-[#03071299]');
             seatPrice.innerText = '550'
             newRow.appendChild(seatName);
             newRow.appendChild(seatClass);
