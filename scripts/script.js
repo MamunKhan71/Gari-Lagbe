@@ -43,7 +43,7 @@ function getDiscount() {
     let discount = 0;
     let grandTotal = 0;
     let totalUpdatePrice = document.getElementById('totalPrice').innerText;
-    if (couponType.value == 'new15') {
+    if (couponType.value == 'NEW15') {
         let grandPrice = document.getElementById('grandTotal');
         discount = parseFloat(totalUpdatePrice) * 0.15;
         grandTotal = parseFloat(totalUpdatePrice) - discount;
