@@ -39,7 +39,7 @@ document.getElementById('seatContainer').addEventListener('click', function (e) 
             grandPrice.innerText = ticketPrice;
             count++;
         } else {
-            alert("Maximum 4 Seats can be booked under one mobile number!")
+            alert("Maximum 4 Seats Can Be Selected! - Selecting the same seat is not possible!")
         }
     }
 });
