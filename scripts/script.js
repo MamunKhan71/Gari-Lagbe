@@ -65,7 +65,7 @@ function getDiscount() {
     }
 }
 document.getElementById('phNumber').addEventListener('keyup', function(e){
-    if(count>1 && String(e.target.value).length==11){
+    if(count>1 && String(e.target.value).length>0){
         document.getElementById('nextBtn').removeAttribute('disabled');
     }
 })

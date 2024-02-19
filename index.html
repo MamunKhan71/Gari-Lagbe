@@ -342,12 +342,12 @@
                                     <div class="flex items-center gap-4 lg:gap-10 w-full">
                                         <span class="w-2 lg:w-4"></span>
                                         <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
-                                            <button id="A1" class="w-full lg:w-28" disabled></button>
-                                            <button id="A2" class="w-full lg:w-28" disabled></button>
+                                            <button class="w-full lg:w-28" disabled></button>
+                                            <button class="w-full lg:w-28" disabled></button>
                                         </div>
                                         <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
-                                            <button id="A3" class="w-full lg:w-28" disabled></button>
-                                            <button id="A4" class="btn w-full lg:w-28" disabled><svg
+                                            <button class="w-full lg:w-28" disabled></button>
+                                            <button class="btn w-full lg:w-28" disabled><svg
                                                     xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                                                     viewBox="0 0 32 32" fill="none">
                                                     <path
@@ -359,13 +359,13 @@
                                     </div>
                                     <div class="flex items-center gap-4 lg:gap-10 w-full">
                                         <span class="w-2 lg:w-4">A</span>
-                                        <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
-                                            <button id="A1" class="btn w-full lg:w-28">A1</button>
-                                            <button id="A2" class="btn w-full lg:w-28">A2</button>
+                                        <div class="grid grid-cols-2 gap-2 lg:gap-4 w-full">
+                                            <button id="A1" class="btn w-full lg:w-24">A1</button>
+                                            <button id="A2" class="btn w-full lg:w-24">A2</button>
                                         </div>
                                         <div class="grid grid-cols-2 gap-2 lg:gap-8 w-full">
-                                            <button id="A3" class="btn w-full lg:w-28">A3</button>
-                                            <button id="A4" class="btn w-full lg:w-28">A4</button>
+                                            <button id="A3" class="btn w-full lg:w-24">A3</button>
+                                            <button id="A4" class="btn w-full lg:w-24">A4</button>
                                         </div>
                                     </div>
                                     <div class="flex items-center gap-4 lg:gap-10">
@@ -496,11 +496,11 @@
                                     <hr>
                                     <div class="flex justify-between px-4 w-full font-bold">
                                         <span>Total Price</span>
-                                        <span>BDT <span id="totalPrice"></span></span>
+                                        <span>BDT <span id="totalPrice">0</span></span>
                                     </div>
                                     <div id="discountPrices" class="hidden flex justify-between px-4 w-full font-bold">
                                         <span>Discount</span>
-                                        <span>BDT <span id="discountPrice"></span></span>
+                                        <span>BDT <span id="discountPrice"></span>0</span>
                                     </div>
                                     <div id="couponBtn" class="relative px-4">
                                         <input type="text" name="name" id="couponName" class="w-full rounded-xl p-5"
@@ -511,7 +511,7 @@
                                     </div>
                                     <div class="flex justify-between w-full px-4 pb-4">
                                         <span class="font-bold">Grand Total</span>
-                                        <span class="font-bold">BDT <span id="grandTotal"></span></span>
+                                        <span class="font-bold">BDT <span id="grandTotal">0</span></span>
                                     </div>
                                 </div>
 
