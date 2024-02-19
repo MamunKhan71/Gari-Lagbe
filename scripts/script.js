@@ -57,6 +57,8 @@ function getDiscount() {
         newElement.classList.remove('hidden');
         document.getElementById('discountPrice').innerText = discount;
         document.getElementById('couponBtn').classList.add('hidden');
+    }else{
+        alert("Wrong Coupon! Please Enter a valid coupon!")
     }
     if (couponType.value == 'Couple20') {
         let grandPrice = document.getElementById('grandTotal');
