@@ -5,7 +5,8 @@ document.getElementById('seatContainer').addEventListener('click', function (e) 
     if (e.target.tagName === 'BUTTON') {
         if (count <= 4 && !clickedButton.includes(e.target.id)) {
             if(count == 4){
-                document.getElementById('couponBtnEnable').removeAttribute('disabled')
+                document.getElementById('couponBtnEnable').removeAttribute('disabled');
+                document.getElementById('couponName').removeAttribute('disabled');
             }
             document.getElementById('seatCounter').innerText = count;
             clickedButton.push(e.target.id);
