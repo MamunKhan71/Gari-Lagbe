@@ -4,7 +4,7 @@ let clickedButton = [];
 document.getElementById('seatContainer').addEventListener('click', function (e) {
     if (e.target.tagName === 'BUTTON') {
         if (count <= 4 && !clickedButton.includes(e.target.id)) {
-            if(count == 4){
+            if (count == 4) {
                 document.getElementById('couponBtnEnable').removeAttribute('disabled');
                 document.getElementById('couponName').removeAttribute('disabled');
             }
@@ -20,7 +20,7 @@ document.getElementById('seatContainer').addEventListener('click', function (e) 
             let seatName = document.createElement('td');
             seatName.innerText = e.target.id;
             seatName.classList.add('text-[#03071299]');
-            
+
             let seatClass = document.createElement('td');
             seatClass.classList.add('text-[#03071299]');
             seatClass.innerText = 'Economic'
@@ -58,7 +58,7 @@ function getDiscount() {
         document.getElementById('discountPrice').innerText = discount;
         document.getElementById('couponBtn').classList.add('hidden');
     }
-    if (couponType.value == 'Couple20') {
+    else if (couponType.value == 'Couple20') {
         let grandPrice = document.getElementById('grandTotal');
         discount = parseFloat(totalUpdatePrice) * 0.20;
         grandTotal = parseFloat(totalUpdatePrice) - discount;
@@ -67,10 +67,12 @@ function getDiscount() {
         newElement.classList.remove('hidden');
         document.getElementById('discountPrice').innerText = discount;
         document.getElementById('couponBtn').classList.add('hidden');
+    } else {
+        alert("Wrong Coupon! Please Enter a valid coupon!")
     }
 }
-document.getElementById('phNumber').addEventListener('keyup', function(e){
-    if(count>1 && String(e.target.value).length>0){
+document.getElementById('phNumber').addEventListener('keyup', function (e) {
+    if (count > 1 && String(e.target.value).length > 0) {
         document.getElementById('nextBtn').removeAttribute('disabled');
     }
 })
